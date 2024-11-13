@@ -9,16 +9,17 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity mi_mux is
-	port (
-    	i1	: in std_logic; -- selector
-        i2	: in std_logic;
-        i3	: in std_logic;
-        x	: out std_logic;
+    port (
+        s : in std_logic; -- selector
+        a : in std_logic;
+        b : in std_logic;
+        y : out std_logic;
     );
 end mi_mux;
 
 architecture Behavior of mi_mux is
 begin
-	x <= 	i2 when i1 = '0' else
-    		i3;
+    with s select
+        y <= a when '0',
+        b when others;
 end Behavior;
