@@ -28,7 +28,7 @@ end design;
 
 architecture Behavior of design is
     -- signal para el mux_3
-    component mux_comp is
+    component mi_mux is
         port (
             s	: in std_logic; -- selector
             a	: in std_logic;
@@ -46,7 +46,7 @@ begin
     y_or <= i1 or i2;
 
     -- MUX 1
-    u1: mux_comp port map (
+    u1: mi_mux port map (
         s   =>  i3,
         a   =>  i4,
         b   =>  i5,
@@ -54,7 +54,7 @@ begin
     ); 
 
     -- MUX 2
-    u2: mux_comp port map (
+    u2: mi_mux port map (
         s   =>  i6,
         a   =>  i7,
         b   =>  i8,
@@ -62,7 +62,7 @@ begin
     );
 
     -- MUX 3
-    u3: mux_comp port map (
+    u3: mi_mux port map (
         s   =>  y_or,
         a   =>  y_mux1,
         b   =>  y_mux2,
