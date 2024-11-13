@@ -57,6 +57,97 @@ begin
         assert f = '0' report "::: >>> Fallo caso 0 :::" severity
         failure;
 
+        -- caso 1
+        i1 <= '0';
+        i2 <= '0';
+        i3 <= '0';
+        i4 <= '1';
+        i5 <= '0';
+        i6 <= '0';
+        i7 <= '0';
+        i8 <= '0';
+        wait for 1 ns;
+        assert f = '1' report "::: >>> Fallo caso 1 :::" severity
+        failure;
+
+        -- caso 2
+        i1 <= '0';
+        i2 <= '0';
+        i3 <= '1';
+        i4 <= '0';
+        i5 <= '0';
+        i6 <= '0';
+        i7 <= '0';
+        i8 <= '0';
+        wait for 1 ns;
+        assert f = '0' report "::: >>> Fallo caso 2 :::" severity
+        failure;
+
+        -- caso 3
+        i1 <= '0';
+        i2 <= '0';
+        i3 <= '1';
+        i4 <= '0';
+        i5 <= '1';
+        i6 <= '0';
+        i7 <= '0';
+        i8 <= '0';
+        wait for 1 ns;
+        assert f = '1' report "::: >>> Fallo caso 2 :::" severity
+        failure;
+
+        -- caso 4
+        i1 <= '0';
+        i2 <= '1';
+        i3 <= '0';
+        i4 <= '0';
+        i5 <= '0';
+        i6 <= '0';
+        i7 <= '0';
+        i8 <= '0';
+        wait for 1 ns;
+        assert f = '0' report "::: >>> Fallo caso 4 :::" severity
+        failure;
+
+        -- caso 5
+        i1 <= '1';
+        i2 <= '0';
+        i3 <= '0';
+        i4 <= '0';
+        i5 <= '0';
+        i6 <= '0';
+        i7 <= '1';
+        i8 <= '0';
+        wait for 1 ns;
+        assert f = '1' report "::: >>> Fallo caso 5 :::" severity
+        failure;
+
+        -- caso 6
+        i1 <= '1';
+        i2 <= '1';
+        i3 <= '0';
+        i4 <= '0';
+        i5 <= '0';
+        i6 <= '1';
+        i7 <= '0';
+        i8 <= '0';
+        wait for 1 ns;
+        assert f = '0' report "::: >>> Fallo caso 6 :::" severity
+        failure;
+
+        -- caso 7
+        i1 <= '1';
+        i2 <= '1';
+        i3 <= '0';
+        i4 <= '0';
+        i5 <= '0';
+        i6 <= '1';
+        i7 <= '0';
+        i8 <= '1';
+        wait for 1 ns;
+        assert f = '1' report "::: >>> Fallo caso 7 :::" severity
+        failure;
+
         -- fin simulacion
         assert false report "::: >>> SIMULACION OK <<< :::" severity
         note;
